@@ -14,12 +14,10 @@ const app = require("./app/config");
 const port = process.env.APP_PORT;
 
 // Start the server and listen on the specified port
-app
-
-.post("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send('Welcome to Wild Serie')
 })
-  .listen(port, () => {
+ .listen(port, () => {
     console.info(`Server is listening on port ${port}`);
   })
   
